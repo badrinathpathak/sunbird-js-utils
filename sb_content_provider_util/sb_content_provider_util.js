@@ -442,6 +442,14 @@ reserveDialcode = function (contentId, data, headers, cb) {
   var options = getHttpOptions(url, data, 'POST', false, headers)
   postRequest(options, cb)
 }
+
+nlpContentSearch = function (querystring, headers, cb) {
+  var url = configUtil.getConfig('NLP_SEARCH_BASE_URL') + configUtil.getConfig('NLP_SEARCH_URI')
+  var options = getHttpOptions(url, null, 'GET', false, headers, configUtil.getConfig('NLP_SEARCH_SERVICE_AUTHORIZATION_TOKEN'))
+  options.qs = querystring
+  console.log('calling nlp service')
+  sendRequest(options, cb)
+}
 /**
  * This function used to generate api_call log event
  * @param {Object} data

@@ -569,5 +569,6 @@ module.exports = {
   getForm: getForm,
   userSearch: userSearch,
   releaseDialcode: releaseDialcode,
-  reserveDialcode: reserveDialcode
+  reserveDialcode: reserveDialcode,
+  nlpContentSearch: nlpContentSearch
 }

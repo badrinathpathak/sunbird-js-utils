@@ -1,6 +1,7 @@
 var httpUtil = require('sb-http-util')
 var configUtil = require('sb-config-util')
 const TelemetryUtil = require('sb_telemetry_util')
+
 var LOG = require('sb_logger_util')
 const telemetry = new TelemetryUtil()
 
@@ -445,8 +446,8 @@ reserveDialcode = function (contentId, data, headers, cb) {
 
 nlpContentSearch = function (querystring, headers, cb) {
   var url = configUtil.getConfig('NLP_SEARCH_BASE_URL') + configUtil.getConfig('NLP_SEARCH_URI')
-  var options = getHttpOptions(url, null, 'GET', false, headers, configUtil.getConfig('NLP_SEARCH_SERVICE_AUTHORIZATION_TOKEN'))
-  options.qs = querystring
+  var options = getHttpOptions(url, querystring, 'POST', false, headers)
+  // options.qs = querystring
   console.log('calling nlp service')
   sendRequest(options, cb)
 }
@@ -569,5 +570,6 @@ module.exports = {
   getForm: getForm,
   userSearch: userSearch,
   releaseDialcode: releaseDialcode,
-  reserveDialcode: reserveDialcode
+  reserveDialcode: reserveDialcode,
+  nlpContentSearch: nlpContentSearch
 }

@@ -496,6 +496,8 @@ function postRequest(http_options, cb) {
   httpUtil.sendRequest(options, function (err, resp, body) {
     if (resp && resp.statusCode && body) {
       body.statusCode = resp.statusCode ? resp.statusCode : 500
+    //
+    //
       if (body.statusCode === 500) {
         LOG.error({ 'errorBody': body, 'errorResponse': resp })
       }

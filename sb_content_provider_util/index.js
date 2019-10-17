@@ -1,5 +1,5 @@
-var ekStepContentUtil = require('./sb_content_provider_util')
-var ekStepFrameworkUtil = require('./sb-ekstep-framework-util')
+var ekStepContentUtil = require('./sb_content_provider_util');
+var ekStepFrameworkUtil = require('./sb-ekstep-framework-util');
 
 module.exports = {
   createContent: ekStepContentUtil.createContent,
@@ -63,10 +63,14 @@ module.exports = {
   frameworkTermSearch: ekStepFrameworkUtil.frameworkTermSearch,
   frameworkTermCreate: ekStepFrameworkUtil.frameworkTermCreate,
   frameworkTermUpdate: ekStepFrameworkUtil.frameworkTermUpdate,
-  getFrameworkCategoryInstance: ekStepFrameworkUtil.getFrameworkCategoryInstance,
-  frameworkCategoryInstanceSearch: ekStepFrameworkUtil.frameworkCategoryInstanceSearch,
-  frameworkCategoryInstanceCreate: ekStepFrameworkUtil.frameworkCategoryInstanceCreate,
-  frameworkCategoryInstanceUpdate: ekStepFrameworkUtil.frameworkCategoryInstanceUpdate,
+  getFrameworkCategoryInstance:
+    ekStepFrameworkUtil.getFrameworkCategoryInstance,
+  frameworkCategoryInstanceSearch:
+    ekStepFrameworkUtil.frameworkCategoryInstanceSearch,
+  frameworkCategoryInstanceCreate:
+    ekStepFrameworkUtil.frameworkCategoryInstanceCreate,
+  frameworkCategoryInstanceUpdate:
+    ekStepFrameworkUtil.frameworkCategoryInstanceUpdate,
   contentHierarchyUpdate: ekStepContentUtil.contentHierarchyUpdate,
   submitDataSetRequest: ekStepContentUtil.submitDataSetRequest,
   getListOfDataSetRequest: ekStepContentUtil.getListOfDataSetRequest,
@@ -83,5 +87,6 @@ module.exports = {
   getForm: ekStepContentUtil.getForm,
   userSearch: ekStepContentUtil.userSearch,
   releaseDialcode: ekStepContentUtil.releaseDialcode,
-  reserveDialcode: ekStepContentUtil.reserveDialcode
-}
+  reserveDialcode: ekStepContentUtil.reserveDialcode,
+  nlpContentSearch: ekStepContentUtil.nlpContentSearch
+};
